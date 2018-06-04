@@ -5,5 +5,9 @@ class User(object):
         self.password = password
 
     @classmethod
-    def Admin(cls):
+    def User(cls):
         return cls(username="test_user02@mail.ru", password="qwerty12")
+
+    @classmethod
+    def Admin(cls):
+        return cls(username="test_user01@mail.ru", password="qwerty12")

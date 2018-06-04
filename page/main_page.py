@@ -26,3 +26,7 @@ class MainPage(object):
     @property
     def register_link(self):
         return self.driver.find_element_by_css_selector("a[href='/users/register']")
+
+    @property
+    def logout_link(self):
+        return self.driver.find_element_by_css_selector("a[href='/users/logout']")
