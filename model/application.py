@@ -6,6 +6,7 @@ from page.login_page import LoginPage
 from page.main_page import MainPage
 from page.cart_page import CartPage
 from page.register_page import RegisterPage
+from page.edit_page import EditPage
 
 
 
@@ -17,6 +18,7 @@ class Application(object):
         self.main_page = MainPage(driver)
         self.cart_page = CartPage(driver)
         self.register_page = RegisterPage(driver)
+        self.edit_page = EditPage(driver)
         self.wait = WebDriverWait(driver, 10)
 
     def go_to_main_page(self):
@@ -28,6 +30,9 @@ class Application(object):
     def go_to_film_page(self):
         self.driver.get("http://kuki.webtest2.htc-cs.com/movies/12")
 
+    def go_to_edit_page(self):
+        self.driver.get("http://kuki.webtest2.htc-cs.com/users/edit")
+
     def login(self, user):
         lp = self.login_page
         lp.username_field.clear()
@@ -35,6 +40,12 @@ class Application(object):
         lp.password_field.clear()
         lp.password_field.send_keys(user.password)
         lp.submit_button.click()
+
+    def delete_user_profile(self):
+        ep = self.edit_page
+        ep.delete_button.click()
+        alert = self.driver.switch_to_alert()
+        alert.accept()
 
     def logout(self):
         mp = self.main_page
