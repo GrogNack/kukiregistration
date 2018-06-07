@@ -1,12 +1,7 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+from page.index_page import Page
 
 
-class LoginPage(object):
-
-    def __init__(self,driver):
-        self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+class LoginPage(Page):
 
     @property
     def username_field(self):

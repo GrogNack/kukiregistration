@@ -25,12 +25,21 @@ def test_login(app):
     assert app.is_logged_in()
     app.logout()
 
-def test_Film(app):
+def test_add_film(app):
     app.go_to_login_page()
     assert app.is_not_logged_in()
     app.login(User.Admin())
     assert app.is_logged_in()
     app.add_film_to_cart()
+    assert app.is_not_empty()
+    app.logout()
+
+def test_del_film(app):
+    app.go_to_login_page()
+    # bp()
+    app.login(User.Admin())
+    app.del_film_from_cart()
+    assert app.is_empty()
     app.logout()
 
 def test_delete_profile(app):

@@ -10,7 +10,6 @@ def app(request, browser_type, base_URL):
     elif browser_type == "chrome" :
         driver = webdriver.Chrome()
     elif browser_type == "ie" :
-        driver = webdriver.Ie
-    # driver.implicitly_wait(30)
-    # request.addfinalizer(driver.quit)
+        driver = webdriver.ie
+    request.addfinalizer(driver.quit)
     return Application(driver, base_URL)

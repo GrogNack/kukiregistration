@@ -7,6 +7,7 @@ from page.main_page import MainPage
 from page.cart_page import CartPage
 from page.register_page import RegisterPage
 from page.edit_page import EditPage
+from page.film_page import FilmPage
 
 
 
@@ -15,12 +16,13 @@ class Application(object):
     def __init__(self, driver, base_url):
         self.driver = driver
         self.base_url = base_url
-        self.login_page = LoginPage(driver)
-        self.main_page = MainPage(driver)
-        self.cart_page = CartPage(driver)
-        self.register_page = RegisterPage(driver)
-        self.edit_page = EditPage(driver)
-        self.wait = WebDriverWait(driver, 10)
+        self.login_page = LoginPage(driver, base_url)
+        self.main_page = MainPage(driver, base_url)
+        self.cart_page = CartPage(driver, base_url)
+        self.register_page = RegisterPage(driver, base_url)
+        self.edit_page = EditPage(driver, base_url)
+        self.film_page = FilmPage(driver, base_url)
+        self.wait = WebDriverWait(driver, 5)
 
     def go_to_main_page(self):
         self.driver.get(self.base_url)
@@ -32,7 +34,7 @@ class Application(object):
         self.driver.get(self.base_url + "movies/12")
 
     def go_to_edit_page(self):
-        self.driver.get(self.base_url + "/users/edit")
+        self.driver.get(self.base_url + "users/edit")
 
     def login(self, user):
         lp = self.login_page
@@ -53,11 +55,16 @@ class Application(object):
         mp.logout_link.click()
 
     def add_film_to_cart(self):
-        fp = self.main_page
-        cp = self.cart_page
-        fp.filmpage_link.click()
+        mp = self.main_page
+        fp = self.film_page
+        mp.filmpage_link.click()
         fp.add_to_button.click()
-        fp.cart_link.click()
+        mp.cart_link.click()
+
+    def del_film_from_cart(self):
+        mp = self.main_page
+        cp = self.cart_page
+        mp.cart_link.click()
         cp.remove_button.click()
 
     def registration(self, user):
@@ -86,3 +93,16 @@ class Application(object):
         except WebDriverException:
             return False
 
+    def is_not_empty(self):
+        try:
+            self.wait.until(presence_of_element_located((By.XPATH,"//*[@id='mycart']//img")))
+            return True
+        except WebDriverException:
+            return False
+
+    def is_empty(self):
+        try:
+            self.wait.until(visibility_of_element_located((By.XPATH,"//*[@id='mycart']/img[@class='cart-movie large-12 column mb1']")))
+            return False
+        except WebDriverException:
+            return True

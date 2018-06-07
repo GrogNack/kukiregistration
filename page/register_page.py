@@ -1,13 +1,7 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-import random
+from page.index_page import Page
 
 
-class RegisterPage(object):
-
-    def __init__(self,driver):
-        self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+class RegisterPage(Page):
 
     @property
     def username_field(self):

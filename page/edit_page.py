@@ -1,12 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-import random
+from page.index_page import Page
 
 
-class EditPage (object):
-    def __init__(self,driver):
-        self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+class EditPage (Page):
 
     @property
     def delete_button(self):
