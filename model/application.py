@@ -12,8 +12,9 @@ from page.edit_page import EditPage
 
 class Application(object):
 
-    def __init__(self, driver):
+    def __init__(self, driver, base_url):
         self.driver = driver
+        self.base_url = base_url
         self.login_page = LoginPage(driver)
         self.main_page = MainPage(driver)
         self.cart_page = CartPage(driver)
@@ -22,16 +23,16 @@ class Application(object):
         self.wait = WebDriverWait(driver, 10)
 
     def go_to_main_page(self):
-        self.driver.get("http://kuki.webtest2.htc-cs.com/")
+        self.driver.get(self.base_url)
 
     def go_to_login_page(self):
-        self.driver.get("http://kuki.webtest2.htc-cs.com/users/login")
+        self.driver.get(self.base_url + "users/login")
 
     def go_to_film_page(self):
-        self.driver.get("http://kuki.webtest2.htc-cs.com/movies/12")
+        self.driver.get(self.base_url + "movies/12")
 
     def go_to_edit_page(self):
-        self.driver.get("http://kuki.webtest2.htc-cs.com/users/edit")
+        self.driver.get(self.base_url + "/users/edit")
 
     def login(self, user):
         lp = self.login_page
