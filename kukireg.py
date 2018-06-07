@@ -6,13 +6,15 @@ import unittest, time, re
 from model.user_data import User
 from pdb import set_trace as bp
 
+RandomUser = User.Random()
+
 
 def test_register(app):
     app.go_to_main_page()
-    app.registration(User.User())
+    app.registration(RandomUser)
     app.logout()
     app.go_to_login_page()
-    app.login(User.User())
+    app.login(RandomUser)
     assert app.is_logged_in()
     app.logout()
 
@@ -33,7 +35,7 @@ def test_Film(app):
 
 def test_delete_profile(app):
     app.go_to_login_page()
-    app.login(User.User())
+    app.login(RandomUser)
     app.go_to_edit_page()
     app.delete_user_profile()
     assert app.is_not_logged_in()
