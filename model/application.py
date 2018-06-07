@@ -102,7 +102,7 @@ class Application(object):
 
     def is_empty(self):
         try:
-            self.wait.until(visibility_of_element_located((By.XPATH,"//*[@id='mycart']/img[@class='cart-movie large-12 column mb1']")))
-            return False
-        except WebDriverException:
+            self.wait.until(invisibility_of_element_located((By.XPATH,"//*[@id='mycart']/img[@class='cart-movie large-12 column mb1']")))
             return True
+        except WebDriverException:
+            return False
