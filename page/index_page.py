@@ -1,4 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.support.expected_conditions import *
 
 
 class Page(object):
@@ -7,3 +9,9 @@ class Page(object):
         self.driver = driver
         self.base_url = base_url
         self.wait = WebDriverWait(driver, 10)
+
+    def is_element_visible(self, locator):
+        try:
+            return self.wait.until(visibility_of_element_located(locator))
+        except WebDriverException:
+            return False

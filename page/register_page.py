@@ -1,7 +1,7 @@
-from page.index_page import Page
+from page.external_page import ExternalPage
 
 
-class RegisterPage(Page):
+class RegisterPage(ExternalPage):
 
     @property
     def username_field(self):

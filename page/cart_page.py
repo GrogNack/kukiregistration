@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from page.index_page import Page
+from page.internal_page import InternalPage
 
 
-class CartPage(Page):
+class CartPage(InternalPage):
 
     @property
     def remove_button(self):

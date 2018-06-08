@@ -30,16 +30,25 @@ class Application(object):
         self.driver.get(self.base_url)
 
     def go_to_login_page(self):
-        self.driver.get(self.base_url + "users/login")
+        # self.driver.get(self.base_url + "users/login")
+        mp = self.main_page
+        mp.login_link.click()
+        # mp.login_link.click()
 
     def go_to_film_page(self, film):
-        self.driver.get(self.base_url + "movies/" + str(film.film_number))
+        # self.driver.get(self.base_url + "movies/" + str(film.film_number))
+        mp = self.main_page
+        mp.filmpage_link[film.film_number-1].click()
 
     def go_to_edit_page(self):
-        self.driver.get(self.base_url + "users/edit")
+        # self.driver.get(self.base_url + "users/edit")
+        mp = self.main_page
+        mp.edit_link.click()
 
     def go_to_cart_page(self):
-        self.driver.get(self.base_url + "cart")
+        # self.driver.get(self.base_url + "cart")
+        mp = self.main_page
+        mp.cart_link.click()
 
     # def smart_logout(self):
     #     element = self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/users/edit']")))

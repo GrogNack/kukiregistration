@@ -1,19 +1,13 @@
-from page.index_page import Page
+from page.external_page import ExternalPage
 from selenium.webdriver.common.by import By
 import random
 
 
-class MainPage(Page):
+class MainPage(ExternalPage):
 
     @property
     def filmpage_link(self):
-        s = self.driver.find_elements(By.CSS_SELECTOR, "a.poster")
-        count = random.randint(0,11)
-        return s[count]
-
-    @property
-    def cart_link(self):
-        return self.driver.find_element_by_css_selector("a[href='/cart']")
+        return self.driver.find_elements_by_css_selector("a.poster")
 
     @property
     def register_link(self):
@@ -22,4 +16,14 @@ class MainPage(Page):
     @property
     def logout_link(self):
         return self.driver.find_element_by_css_selector("a[href='/users/logout']")
+
+    @property
+    def cart_link(self):
+        return self.driver.find_element_by_css_selector("a[href='/cart']")
+
+    @property
+    def edit_link(self):
+        return self.driver.find_element_by_css_selector("a[href='/users/edit']")
+
+
 

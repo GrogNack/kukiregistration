@@ -12,22 +12,23 @@ randomUser = User.Random()
 randomFilm = Film.Random()
 
 
-def test_register(app):
-    app.go_to_main_page()
-    app.registration(randomUser)
-    app.logout()
-    app.go_to_login_page()
-    app.login(randomUser)
-    assert app.is_logged_in()
-    app.logout()
-
-def test_login(app):
-    app.go_to_login_page()
-    app.login(User.Admin())
-    assert app.is_logged_in()
-    app.logout()
+# def test_register(app):
+#     app.go_to_main_page()
+#     app.registration(randomUser)
+#     app.logout()
+#     app.go_to_login_page()
+#     app.login(randomUser)
+#     assert app.is_logged_in()
+#     app.logout()
+#
+# def test_login(app):
+#     app.go_to_login_page()
+#     app.login(User.Admin())
+#     assert app.is_logged_in()
+#     app.logout()
 
 def test_AddDel_film(app):
+    app.go_to_main_page()
     app.go_to_login_page()
     app.login(User.Admin())
     app.go_to_film_page(randomFilm)
@@ -42,9 +43,9 @@ def test_AddDel_film(app):
     assert app.is_empty()
     app.logout()
 
-def test_delete_profile(app):
-    app.go_to_login_page()
-    app.login(randomUser)
-    app.go_to_edit_page()
-    app.delete_user_profile()
-    assert app.is_not_logged_in()
+# def test_delete_profile(app):
+#     app.go_to_login_page()
+#     app.login(randomUser)
+#     app.go_to_edit_page()
+#     app.delete_user_profile()
+#     assert app.is_not_logged_in()

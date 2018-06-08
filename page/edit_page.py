@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-from page.index_page import Page
+from page.internal_page import InternalPage
 
 
-class EditPage (Page):
+class EditPage (InternalPage):
 
     @property
     def delete_button(self):
