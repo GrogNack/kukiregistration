@@ -4,47 +4,47 @@ from selenium.common.exceptions import *
 from fixture import app
 import unittest, time, re
 from model.user_data import User
+from model.film_data import Film
 from pdb import set_trace as bp
+import random
 
-RandomUser = User.Random()
+randomUser = User.Random()
+randomFilm = Film.Random()
 
 
 def test_register(app):
     app.go_to_main_page()
-    app.registration(RandomUser)
+    app.registration(randomUser)
     app.logout()
     app.go_to_login_page()
-    app.login(RandomUser)
+    app.login(randomUser)
     assert app.is_logged_in()
     app.logout()
 
 def test_login(app):
     app.go_to_login_page()
-    assert app.is_not_logged_in()
     app.login(User.Admin())
     assert app.is_logged_in()
     app.logout()
 
-def test_add_film(app):
+def test_AddDel_film(app):
     app.go_to_login_page()
-    assert app.is_not_logged_in()
     app.login(User.Admin())
-    assert app.is_logged_in()
-    app.add_film_to_cart()
-    assert app.is_not_empty()
-    app.logout()
-
-def test_del_film(app):
-    app.go_to_login_page()
-    # bp()
-    app.login(User.Admin())
+    app.go_to_film_page(randomFilm)
+    app.add_film_to_cart(randomFilm)
+    assert app.check_count_of_film_in_top("add")
+    app.go_to_cart_page()
+    assert app.check_count_of_film_in_cart("add")
+    assert app.equal_title(randomFilm)
     app.del_film_from_cart()
+    assert app.check_count_of_film_in_top("del")
+    assert app.check_count_of_film_in_cart("del")
     assert app.is_empty()
     app.logout()
 
 def test_delete_profile(app):
     app.go_to_login_page()
-    app.login(RandomUser)
+    app.login(randomUser)
     app.go_to_edit_page()
     app.delete_user_profile()
     assert app.is_not_logged_in()

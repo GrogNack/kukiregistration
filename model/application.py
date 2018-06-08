@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from selenium.common.exceptions import *
 from selenium.webdriver.support.expected_conditions import *
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,6 +9,7 @@ from page.cart_page import CartPage
 from page.register_page import RegisterPage
 from page.edit_page import EditPage
 from page.film_page import FilmPage
+from pdb import set_trace as bp
 
 
 
@@ -22,7 +24,7 @@ class Application(object):
         self.register_page = RegisterPage(driver, base_url)
         self.edit_page = EditPage(driver, base_url)
         self.film_page = FilmPage(driver, base_url)
-        self.wait = WebDriverWait(driver, 5)
+        self.wait = WebDriverWait(driver, 10)
 
     def go_to_main_page(self):
         self.driver.get(self.base_url)
@@ -30,11 +32,20 @@ class Application(object):
     def go_to_login_page(self):
         self.driver.get(self.base_url + "users/login")
 
-    def go_to_film_page(self):
-        self.driver.get(self.base_url + "movies/12")
+    def go_to_film_page(self, film):
+        self.driver.get(self.base_url + "movies/" + str(film.film_number))
 
     def go_to_edit_page(self):
         self.driver.get(self.base_url + "users/edit")
+
+    def go_to_cart_page(self):
+        self.driver.get(self.base_url + "cart")
+
+    # def smart_logout(self):
+    #     element = self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/users/edit']")))
+    #     if element.value_of_css_property("href") == "/users/edit" :
+    #         bp()
+    #         self.logout()
 
     def login(self, user):
         lp = self.login_page
@@ -54,12 +65,10 @@ class Application(object):
         mp = self.main_page
         mp.logout_link.click()
 
-    def add_film_to_cart(self):
-        mp = self.main_page
+    def add_film_to_cart(self, film):
         fp = self.film_page
-        mp.filmpage_link.click()
+        film.film_name = fp.film_title.text[0:-7]
         fp.add_to_button.click()
-        mp.cart_link.click()
 
     def del_film_from_cart(self):
         mp = self.main_page
@@ -79,6 +88,39 @@ class Application(object):
         rp.confirm_password_field.send_keys(user.password)
         rp.submit_button.click()
 
+# Проверка увеличения счётчика в верхнем меню
+    def check_count_of_film_in_top(self, flag):
+        fp = self.film_page
+        num_film = fp.count_of_film
+        # print(num_film.text)
+        if flag == "add" :
+            if num_film.text == "1" :
+                return True
+        elif flag == "del" :
+            if num_film.text == "0" :
+                return True
+
+# Проверка увеличения счётчика на странице корзхины
+    def check_count_of_film_in_cart(self, flag):
+        cp = self.cart_page
+        num_film = cp.num_of_film
+        # print(num_film.text)
+        if flag == "add" :
+            if num_film.text == "1" :
+                return True
+        elif flag == "del" :
+            if num_film.text == "0" :
+                return True
+
+# Проверка названия фильма
+    def equal_title(self,film):
+        cp = self.cart_page
+        movie_title = cp.film_title.text
+        # print(movie_title)
+        # print(film.film_name)
+        if movie_title == film.film_name :
+            return True
+
     def is_logged_in(self):
         try:
             self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/cart']")))
@@ -93,16 +135,9 @@ class Application(object):
         except WebDriverException:
             return False
 
-    def is_not_empty(self):
-        try:
-            self.wait.until(presence_of_element_located((By.XPATH,"//*[@id='mycart']//img")))
-            return True
-        except WebDriverException:
-            return False
-
     def is_empty(self):
         try:
-            self.wait.until(invisibility_of_element_located((By.XPATH,"//*[@id='mycart']/img[@class='cart-movie large-12 column mb1']")))
+            self.wait.until(invisibility_of_element_located((By.XPATH,"//*[@id='mycart']//div[@class='cart-movie large-12 column mb1']")))
             return True
         except WebDriverException:
             return False
