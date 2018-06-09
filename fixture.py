@@ -11,5 +11,5 @@ def app(request, browser_type, base_URL):
         driver = webdriver.Chrome()
     elif browser_type == "ie" :
         driver = webdriver.ie
-    # request.addfinalizer(driver.quit)
+    request.addfinalizer(driver.quit)
     return Application(driver, base_URL)

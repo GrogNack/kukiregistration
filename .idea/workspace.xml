@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6482b34-eb78-4050-b074-8e8f1b1088e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kukireg.py" beforeDir="false" afterPath="$PROJECT_DIR$/kukireg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/internal_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/internal_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,13 +14,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kukireg.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kukireg.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kukireg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="167">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fixture.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixture.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+            <state relative-caret-position="782">
+              <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -121,7 +131,6 @@
         <option value="$PROJECT_DIR$/page/page.py" />
         <option value="$PROJECT_DIR$/page/film_page.py" />
         <option value="$PROJECT_DIR$/model/film_data.py" />
-        <option value="$PROJECT_DIR$/fixture.py" />
         <option value="$PROJECT_DIR$/page/index_page.py" />
         <option value="$PROJECT_DIR$/page/cart_page.py" />
         <option value="$PROJECT_DIR$/page/edit_page.py" />
@@ -132,6 +141,7 @@
         <option value="$PROJECT_DIR$/model/user_data.py" />
         <option value="$PROJECT_DIR$/page/internal_page.py" />
         <option value="$PROJECT_DIR$/model/application.py" />
+        <option value="$PROJECT_DIR$/fixture.py" />
         <option value="$PROJECT_DIR$/kukireg.py" />
       </list>
     </option>
@@ -244,24 +254,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_--firefox - 2018.06.08 at 17h 01m 18s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.09 at 08h 51m 46s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.09 at 08h 52m 08s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.09 at 08h 54m 48s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.09 at 08h 56m 39s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.09 at 08h 56m 57s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_--firefox - 2018.06.09 at 08h 57m 45s.xml">
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
@@ -272,6 +264,24 @@
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_--firefox - 2018.06.09 at 09h 01m 14s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 01m 56s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 03m 12s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 06m 42s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 07m 44s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 08m 41s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 10m 00s.xml">
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
   </component>
@@ -398,6 +408,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -504,6 +517,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -535,6 +551,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -570,13 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fixture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -669,20 +681,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/application.py">
+    <entry file="file://$PROJECT_DIR$/fixture.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="65" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+        <state relative-caret-position="221">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kukireg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="167">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#24#54#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
         </state>
       </provider>
     </entry>

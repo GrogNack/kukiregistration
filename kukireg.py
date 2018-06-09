@@ -14,18 +14,21 @@ randomFilm = Film.Random()
 
 def test_register(app):
     app.go_to_main_page()
+    app.smart_logout()
     app.registration(randomUser)
     app.logout()
     app.go_to_login_page()
     app.login(randomUser)
-    assert app.is_logged_in()
-    app.logout()
+    assert app.is_logged_is_as(randomUser)
+    # app.logout()
 
 def test_login(app):
+    app.go_to_main_page()
+    app.smart_logout()
     app.go_to_login_page()
     app.login(User.Admin())
-    assert app.is_logged_in()
-    app.logout()
+    assert app.is_logged_is_as(User.Admin())
+    # app.logout()
 
 def test_AddDel_film(app):
     app.go_to_main_page()
@@ -42,9 +45,11 @@ def test_AddDel_film(app):
     assert app.check_count_of_film_in_top("del")
     assert app.check_count_of_film_in_cart("del")
     assert app.is_empty()
-    app.logout()
+    # app.logout()
 
 def test_delete_profile(app):
+    app.go_to_main_page()
+    app.smart_logout()
     app.go_to_login_page()
     app.login(randomUser)
     app.go_to_edit_page()
