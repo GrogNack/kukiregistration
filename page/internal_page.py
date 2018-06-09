@@ -13,3 +13,7 @@ class InternalPage(Page):
     @property
     def edit_link(self):
         return self.driver.find_element_by_css_selector("a[href='/users/edit']")
+
+    # @property
+    # def is_this_page(self):
+    #     return self.driver.find_element_by_link_text()

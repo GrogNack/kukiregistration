@@ -50,12 +50,20 @@ class Application(object):
         mp = self.main_page
         mp.cart_link.click()
 
-    # def is_logged_is_as(self, user):
-    # def smart_logout(self):
-    #     element = self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/users/edit']")))
-    #     if element.value_of_css_property("href") == "/users/edit" :
-    #         bp()
-    #         self.logout()
+    def is_logged_is_as(self, user):
+        try:
+            self.driver.find_element_by_link_text(user.username)
+            return True
+        except WebDriverException:
+            return False
+
+    def smart_logout(self):
+        # if self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/users/edit']"))) :
+        try:
+            if self.driver.find_element_by_css_selector("a[href='/users/edit']") :
+                self.logout()
+        except:
+            return True
 
     def login(self, user):
         lp = self.login_page
