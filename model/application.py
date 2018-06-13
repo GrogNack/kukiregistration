@@ -24,7 +24,7 @@ class Application(object):
         self.register_page = RegisterPage(driver, base_url)
         self.edit_page = EditPage(driver, base_url)
         self.film_page = FilmPage(driver, base_url)
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 5)
 
     def go_to_main_page(self):
         self.driver.get(self.base_url)
@@ -57,13 +57,17 @@ class Application(object):
         except WebDriverException:
             return False
 
-    def smart_logout(self):
-        # if self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/users/edit']"))) :
-        try:
-            if self.driver.find_element_by_css_selector("a[href='/users/edit']") :
-                self.logout()
-        except:
+    def smart_logout(self, user):
+        if self.is_logged_is_as(user) :
             return True
+        else:
+            self.logout()
+            self.go_to_login_page()
+            self.login(user)
+
+    def smart_logout_full(self):
+        if self.is_logged_in():
+            self.logout()
 
     def login(self, user):
         lp = self.login_page
@@ -141,7 +145,8 @@ class Application(object):
 
     def is_logged_in(self):
         try:
-            self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/cart']")))
+            # self.wait.until(presence_of_element_located((By.CSS_SELECTOR,"a[href='/cart']")))
+            self.driver.find_element_by_css_selector("a[href='/cart']")
             return True
         except WebDriverException:
             return False
