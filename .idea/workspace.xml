@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6482b34-eb78-4050-b074-8e8f1b1088e9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/fixture.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kukireg.py" beforeDir="false" afterPath="$PROJECT_DIR$/kukireg.py" afterDir="false" />
-    </list>
+    <list default="true" id="d6482b34-eb78-4050-b074-8e8f1b1088e9" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="kukireg.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="kukireg.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kukireg.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="167">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -50,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+            <state relative-caret-position="163">
+              <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -254,9 +251,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_--firefox - 2018.06.09 at 08h 57m 45s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_--firefox - 2018.06.09 at 08h 59m 40s.xml">
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
@@ -282,6 +276,9 @@
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
     <history-entry file="py_test_--firefox - 2018.06.09 at 09h 10m 00s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.09 at 09h 15m 46s.xml">
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
   </component>
@@ -691,20 +688,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kukireg.py">
+    <entry file="file://$PROJECT_DIR$/model/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="163">
+          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/application.py">
+    <entry file="file://$PROJECT_DIR$/kukireg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        <state relative-caret-position="167">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
