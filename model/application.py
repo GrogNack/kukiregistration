@@ -110,6 +110,10 @@ class Application(object):
         rp.confirm_password_field.send_keys(user.password)
         rp.submit_button.click()
 
+# Запомнить кол-во фильмов в корзине
+#     def remember(self, count):
+#         fp =
+
 # Проверка увеличения счётчика в верхнем меню
     def check_count_of_film_in_top(self, flag):
         fp = self.film_page

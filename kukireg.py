@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-from selenium import webdriver
-from selenium.common.exceptions import *
-from fixture import app
-import unittest, time, re
 from model.user_data import User
 from model.film_data import Film
-from pdb import set_trace as bp
-import random
+
 
 randomUser = User.Random()
 randomFilm = Film.Random()
