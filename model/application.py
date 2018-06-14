@@ -9,8 +9,10 @@ from page.cart_page import CartPage
 from page.register_page import RegisterPage
 from page.edit_page import EditPage
 from page.film_page import FilmPage
+from page.internal_page import InternalPage
 from pdb import set_trace as bp
 
+import kukireg
 
 
 class Application(object):
@@ -24,6 +26,7 @@ class Application(object):
         self.register_page = RegisterPage(driver, base_url)
         self.edit_page = EditPage(driver, base_url)
         self.film_page = FilmPage(driver, base_url)
+        self.internal_page = InternalPage(driver, base_url)
         self.wait = WebDriverWait(driver, 5)
 
     def go_to_main_page(self):
@@ -111,31 +114,34 @@ class Application(object):
         rp.submit_button.click()
 
 # Запомнить кол-во фильмов в корзине
-#     def remember(self, count):
-#         fp =
+    def remember(self):
+        ip = self.internal_page
+        kukireg.current = ip.count_of_film.text
+        # print("remember " + kukireg.current)
 
 # Проверка увеличения счётчика в верхнем меню
-    def check_count_of_film_in_top(self, flag):
-        fp = self.film_page
+    def check_count_of_film_in_top(self, count, flag):
+        fp = self.internal_page
         num_film = fp.count_of_film
         # print(num_film.text)
+        # print(count)
         if flag == "add" :
-            if num_film.text == "1" :
+            if num_film.text == str(int(count)+1) :
                 return True
         elif flag == "del" :
-            if num_film.text == "0" :
+            if num_film.text == str(int(count)-1) :
                 return True
 
 # Проверка увеличения счётчика на странице корзхины
-    def check_count_of_film_in_cart(self, flag):
-        cp = self.cart_page
-        num_film = cp.num_of_film
+    def check_count_of_film_in_cart(self, count, flag):
+        cp = self.internal_page
+        num_film = cp.count_of_film
         # print(num_film.text)
         if flag == "add" :
-            if num_film.text == "1" :
+            if num_film.text == str(int(count)+1) :
                 return True
         elif flag == "del" :
-            if num_film.text == "0" :
+            if num_film.text == str(int(count)-1) :
                 return True
 
 # Проверка названия фильма

@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 from model.user_data import User
 from model.film_data import Film
+from pdb import set_trace as bp
 
 
 randomUser = User.Random()
 randomFilm = Film.Random()
+current = "0"
 
 
 def test_register(app):
@@ -29,17 +31,23 @@ def test_login(app):
 def test_AddDel_film(app):
     app.go_to_main_page()
     app.smart_logout(User.Admin())
+
+    # app.smart_logout_full()
     # app.go_to_login_page()
     # app.login(User.Admin())
     app.go_to_film_page(randomFilm)
+    app.remember()
+    # print("Cur1 " + current)
     app.add_film_to_cart(randomFilm)
-    assert app.check_count_of_film_in_top("add")
+    assert app.check_count_of_film_in_top(current, "add")
     app.go_to_cart_page()
-    assert app.check_count_of_film_in_cart("add")
+    assert app.check_count_of_film_in_cart(current, "add")
+    # print("Cur2 " + current)
+    app.remember()
     assert app.equal_title(randomFilm)
     app.del_film_from_cart()
-    assert app.check_count_of_film_in_top("del")
-    assert app.check_count_of_film_in_cart("del")
+    assert app.check_count_of_film_in_top(current, "del")
+    assert app.check_count_of_film_in_cart(current, "del")
     assert app.is_empty()
     # app.logout()
 
