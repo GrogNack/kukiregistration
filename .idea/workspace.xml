@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d6482b34-eb78-4050-b074-8e8f1b1088e9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/fixture.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kukireg.py" beforeDir="false" afterPath="$PROJECT_DIR$/kukireg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/film_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/film_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page/internal_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/internal_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +16,7 @@
       <file leaf-file-name="kukireg.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kukireg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
+            <state relative-caret-position="425">
               <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
               <folding>
                 <element signature="e#24#56#0" expanded="true" />
@@ -32,10 +28,22 @@
       <file leaf-file-name="application.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/application.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+            <state relative-caret-position="2992">
+              <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
               <folding>
                 <element signature="e#24#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page/index_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,12 +140,12 @@
         <option value="$PROJECT_DIR$/page/film_page.py" />
         <option value="$PROJECT_DIR$/page/internal_page.py" />
         <option value="$PROJECT_DIR$/page/main_page.py" />
-        <option value="$PROJECT_DIR$/model/application.py" />
         <option value="$PROJECT_DIR$/kukireg.py" />
+        <option value="$PROJECT_DIR$/model/application.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -245,15 +253,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_--firefox - 2018.06.14 at 11h 40m 20s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.14 at 11h 42m 07s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_--firefox - 2018.06.14 at 11h 42m 17s.xml">
-      <configuration name="py.test --firefox" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_--firefox - 2018.06.14 at 11h 42m 36s.xml">
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
@@ -275,17 +274,26 @@
     <history-entry file="py_test_--firefox - 2018.06.14 at 13h 16m 06s.xml">
       <configuration name="py.test --firefox" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.14 at 13h 20m 56s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.14 at 13h 21m 59s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_--firefox - 2018.06.14 at 13h 22m 59s.xml">
+      <configuration name="py.test --firefox" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14568081" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14568081" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961586" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32961586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -595,27 +603,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/user_data.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/index_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page/internal_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/page/cart_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -645,17 +629,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/application.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
+        <state relative-caret-position="2992">
+          <caret line="176" lean-forward="true" selection-start-line="176" selection-end-line="176" />
           <folding>
             <element signature="e#24#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/page/index_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/internal_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kukireg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
+        <state relative-caret-position="425">
           <caret line="49" column="52" selection-start-line="49" selection-start-column="52" selection-end-line="49" selection-end-column="52" />
           <folding>
             <element signature="e#24#56#0" expanded="true" />
