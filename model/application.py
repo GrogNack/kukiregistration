@@ -61,12 +61,12 @@ class Application(object):
             return False
 
     def smart_logout(self, user):
-        if self.is_logged_is_as(user) :
-            return True
-        else:
-            self.logout()
-            self.go_to_login_page()
-            self.login(user)
+            if self.is_logged_is_as(user) :
+                return True
+            else:
+                self.logout()
+                self.go_to_login_page()
+                self.login(user)
 
     def smart_logout_full(self):
         if self.is_logged_in():
@@ -88,7 +88,10 @@ class Application(object):
 
     def logout(self):
         mp = self.main_page
-        mp.logout_link.click()
+        try:
+            mp.logout_link.click()
+        except:
+            return  True
 
     def add_film_to_cart(self, film):
         fp = self.film_page
@@ -114,9 +117,10 @@ class Application(object):
         rp.submit_button.click()
 
 # Запомнить кол-во фильмов в корзине
-    def remember(self):
+    def remember(self, ):
         ip = self.internal_page
-        kukireg.current = ip.count_of_film.text
+        return ip.count_of_film.text
+        # kukireg.current = ip.count_of_film.text
         # print("remember " + kukireg.current)
 
 # Проверка увеличения счётчика в верхнем меню
@@ -147,11 +151,28 @@ class Application(object):
 # Проверка названия фильма
     def equal_title(self,film):
         cp = self.cart_page
-        movie_title = cp.film_title.text
-        # print(movie_title)
-        # print(film.film_name)
-        if movie_title == film.film_name :
-            return True
+        movie_title = cp.list_film
+        equal = False
+        i = 0
+
+        while i < len(movie_title) :
+            if movie_title[i].text == film.film_name :
+                equal = True
+                # print(movie_title[i].text)
+                # print(film.film_name)
+                break
+            i += 1
+
+        return equal
+        # for i in range(len(movie_title)) :
+        #     print(movie_title[i].text)
+        #
+        # if movie_title == film.film_name :
+        #     return True
+
+
+
+
 
     def is_logged_in(self):
         try:
