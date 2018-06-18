@@ -73,7 +73,9 @@ class Application(object):
             self.logout()
 
     def login(self, user):
+        mp = self.main_page
         lp = self.login_page
+        mp.login_link.click()
         lp.username_field.clear()
         lp.username_field.send_keys(user.username)
         lp.password_field.clear()
@@ -196,9 +198,10 @@ class Application(object):
         except WebDriverException:
             return False
 
-    def is_empty(self):
+    def is_film_delete(self, film):
         try:
-            self.wait.until(invisibility_of_element_located((By.XPATH,"//*[@id='mycart']//div[@class='cart-movie large-12 column mb1']")))
+            # self.wait.until(invisibility_of_element_located((By.XPATH,"//*[@id='mycart']//div[@class='cart-movie large-12 column mb1']")))
+            self.wait.until(invisibility_of_element_located((By.XPATH, "//*[@id='mycart']//a[@href='/movies/" + str(film.film_number) + "']")))
             return True
         except WebDriverException:
             return False
