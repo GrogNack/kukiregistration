@@ -13,3 +13,8 @@ class FilmPage(Page):
     @property
     def film_title(self):
         return self.driver.find_element(By.XPATH, "//*[@id='main-content']//h3")
+
+    @property
+    def add_del_button(self):
+        return  self.driver.find_element(By.XPATH, "//*[@id='main-content']//a[@href='']")
+

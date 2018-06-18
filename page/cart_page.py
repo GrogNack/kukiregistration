@@ -25,3 +25,6 @@ class CartPage(InternalPage):
     def list_film(self):
         return self.driver.find_elements(By.XPATH, "//*[@id='mycart']/descendant::p[@class='scale ptm']")
 
+    @property
+    def list_cross(self):
+        return self.driver.find_elements(By.XPATH, "//*[@id='mycart']//i")

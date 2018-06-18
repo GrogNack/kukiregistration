@@ -98,11 +98,23 @@ class Application(object):
         film.film_name = fp.film_title.text[0:-7]
         fp.add_to_button.click()
 
-    def del_film_from_cart(self):
+    def del_film_from_cart(self, film):
         mp = self.main_page
         cp = self.cart_page
         mp.cart_link.click()
-        cp.remove_button.click()
+        films = cp.list_film
+        cross = cp.list_cross
+        i = 0
+        while i in xrange(len(films)):
+            if films[i].text == film.film_name:
+                cross[i].click()
+                break
+            i += 1
+
+        # mp = self.main_page
+        # cp = self.cart_page
+        # mp.cart_link.click()
+        # cp.remove_button.click()
 
     def registration(self, user):
         mp = self.main_page
@@ -162,17 +174,12 @@ class Application(object):
                 # print(film.film_name)
                 break
             i += 1
-
         return equal
         # for i in range(len(movie_title)) :
         #     print(movie_title[i].text)
         #
         # if movie_title == film.film_name :
         #     return True
-
-
-
-
 
     def is_logged_in(self):
         try:
